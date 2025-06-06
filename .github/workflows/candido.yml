@@ -1,0 +1,29 @@
+name: CI
+
+on: push
+
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a hello w
+        run: echo Hello, world!
+  job2: 
+    name: Second Job
+    runs-on: windows-latest
+    steps:
+      - name: Step one of job2
+        uses: actions/checkout@v4
+      - name: Step two of job2
+        run: pwd
+  job3:
+    name: Third Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step one
+        uses: actions/checkout@v4
+      - name: Step two
+        run: ls -la
+      - run: pwd
